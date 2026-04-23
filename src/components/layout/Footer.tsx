@@ -20,7 +20,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <Link to="/" className="inline-block mb-4">
               <span className="text-xl font-bold text-foreground">
-                STARKS <span className="text-primary">INFOTECH</span>
+                KRIZ <span className="text-primary">BOT INC</span>
               </span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-md">
@@ -56,10 +56,10 @@ const Footer = () => {
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail size={18} />
-                contact@starksinfotech.com
+                contact@krizoramarket.com
               </a>
               <a
-                href="https://github.com/starksinfotech"
+                href="https://github.com/AnanthKriz/KRIZ-BOT-INC.git"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
@@ -75,7 +75,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © {currentYear} STARKS INFOTECH. All rights reserved.
+              © {currentYear} KRIZ BOT INC. All rights reserved.
             </p>
             <div className="flex gap-6">
               <Link
