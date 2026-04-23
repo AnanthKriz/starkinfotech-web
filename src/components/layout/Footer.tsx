@@ -59,7 +59,7 @@ const Footer = () => {
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail size={18} />
-                contact@krizoramarket.com
+                href="mailto:contact@krizoramarket.com
               </a>
 
               <a
