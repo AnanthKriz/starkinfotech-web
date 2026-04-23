@@ -10,12 +10,14 @@ const Footer = () => {
     { name: "Database Management", path: "/services#database" },
     { name: "Billing Software", path: "/services#billing" },
     { name: "Cybersecurity", path: "/services#security" },
+    { name: "Chatbot Development", path: "/services#chatbot" }, // ✅ added
   ];
 
   return (
     <footer className="bg-card border-t border-border">
       <div className="container mx-auto px-4 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+
           {/* Company Info */}
           <div className="lg:col-span-2">
             <Link to="/" className="inline-block mb-4">
@@ -23,10 +25,10 @@ const Footer = () => {
                 KRIZ <span className="text-primary"> INC</span>
               </span>
             </Link>
+
             <p className="text-muted-foreground text-sm leading-relaxed max-w-md">
-              We are a technology solutions company specializing in custom software development, 
-              mobile applications, database management, and cybersecurity. Our mission is to 
-              deliver secure, scalable, and high-performance solutions that drive business success.
+              We build custom software, mobile apps, chatbots, and secure systems
+              that help businesses grow faster and smarter.
             </p>
           </div>
 
@@ -51,15 +53,17 @@ const Footer = () => {
           <div>
             <h3 className="text-foreground font-semibold mb-4">Connect</h3>
             <div className="space-y-4">
+
               <a
-                href="mailto:contact@starksinfotech.com"
+                href="mailto:contact@krizoramarket.com" // ✅ fixed
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail size={18} />
-                href="mailto:contact@starksinfotech.com"
+                contact@krizoramarket.com
               </a>
+
               <a
-                href="https://github.com/AnanthKriz/KRIZ-BOT-INC.git"
+                href="https://github.com/AnanthKriz/KRIZ-BOT-INC" // ✅ removed dot
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
@@ -67,16 +71,20 @@ const Footer = () => {
                 <Github size={18} />
                 GitHub
               </a>
+
             </div>
           </div>
+
         </div>
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+
             <p className="text-sm text-muted-foreground">
               © {currentYear} KRIZ BOT INC. All rights reserved.
             </p>
+
             <div className="flex gap-6">
               <Link
                 to="/about"
@@ -84,6 +92,7 @@ const Footer = () => {
               >
                 About Us
               </Link>
+
               <Link
                 to="/contact"
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
@@ -91,6 +100,7 @@ const Footer = () => {
                 Contact
               </Link>
             </div>
+
           </div>
         </div>
       </div>
