@@ -13,8 +13,8 @@ const services = [
     id: "chatbot",
     icon: Bot,
     title: "Bot Development",
-    description: "About
-Kriz Bot Inc is a WhatsApp userbot developed by Ananth Kriz, designed to enhance and automate your WhatsApp experience. It offers a wide range of advanced features, enabling efficient communication, customization, and productivity directly within WhatsApp..",
+    description: "Kriz Bot Inc is a WhatsApp userbot developed by Ananth Kriz, designed to enhance and automate your WhatsApp experience. It offers a wide range of advanced features, enabling efficient communication, customization, and productivity directly within WhatsApp..",
+
   },
   {
     id: "mobile",
