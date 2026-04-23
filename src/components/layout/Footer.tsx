@@ -56,10 +56,10 @@ const Footer = () => {
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail size={18} />
-                contact@krizoramarket.com
+                href="mailto:contact@starksinfotech.com"
               </a>
               <a
-                href="https://github.com/AnanthKriz/KRIZ-BOT-INC."
+                href="https://github.com/AnanthKriz/KRIZ-BOT-INC.git"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
