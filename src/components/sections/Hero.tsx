@@ -16,24 +16,24 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
             <Shield size={16} className="text-primary" />
-            <span className="text-sm text-primary font-medium">Secure & Scalable Solutions</span>
+            <span className="text-sm text-primary font-medium">Secure & Scalable Automations</span>
           </div>
 
           {/* Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight mb-6">
-            Custom Software & Digital Solutions by{" "}
-            <span className="text-primary">STARKS INFOTECH</span>
+            Custom Watsapp Automations by{" "}
+            <span className="text-primary">KRIZ BOT INC</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-            We build secure, scalable, and high-performance software tailored to business needs.
+            We build secure, scalable, and high-performance Softwares.
           </p>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild className="text-base px-8">
-              <a href="mailto:contact@starksinfotech.com">
+              <a href="mailto:contact@krizoramarket.com">
                 Get a Free Consultation
                 <ArrowRight size={18} className="ml-2" />
               </a>
