@@ -59,7 +59,7 @@ const Footer = () => {
                 contact@krizoramarket.com
               </a>
               <a
-                href="https://github.com/AnanthKriz/KRIZ-BOT-INC.git"
+                href="https://github.com/AnanthKriz/KRIZ-BOT-INC."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
