@@ -63,7 +63,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://github.com/AnanthKriz/KRIZ-BOT-INC.git" // ✅ removed dot
+                href="https://github.com/AnanthKriz/KRIZ-BOT-INC" // ✅ removed dot
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
