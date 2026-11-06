@@ -1,27 +1,42 @@
+import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
-import { Button } from "@/components/ui/button";
-import { Shield, Users, Target, Award, ArrowRight } from "lucide-react";
+import { Shield, Users, Target, Award, ArrowUpRight, Cpu, Sparkles } from "lucide-react";
 
-const values = [
+interface ValueItem {
+  number: string;
+  icon: typeof Shield;
+  title: string;
+  description: string;
+}
+
+const values: ValueItem[] = [
   {
+    number: "01",
     icon: Shield,
     title: "Security First",
-    description: "Every solution we build prioritizes security, protecting your data and your customers' trust.",
+    description:
+      "Every architecture we deploy prioritizes data integrity and defense-in-depth. We build software that protects customer trust from day zero.",
   },
   {
+    number: "02",
     icon: Users,
     title: "Client Partnership",
-    description: "We work alongside you as partners, not just vendors. Your success is our success.",
+    description:
+      "We operate as technical partners and engineering allies, not transactional vendors. Your operational growth is our primary benchmark of success.",
   },
   {
+    number: "03",
     icon: Target,
     title: "Results Driven",
-    description: "We focus on delivering measurable outcomes that directly impact your bottom line.",
+    description:
+      "We cut through digital vanity metrics. Every automation trigger, custom ERP module, and API endpoint is built to produce measurable ROI.",
   },
   {
+    number: "04",
     icon: Award,
     title: "Excellence in Craft",
-    description: "We take pride in writing clean, maintainable code that stands the test of time.",
+    description:
+      "We take deep pride in clean, modular, self-documenting code. Our software is engineered to stand the test of time, scale, and refactoring.",
   },
 ];
 
@@ -29,74 +44,121 @@ const About = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-20 lg:py-28 bg-background">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              About STARKS INFOTECH
+      <section className="relative pt-36 pb-20 lg:pt-44 lg:pb-28 bg-[#111111] overflow-hidden border-b border-white/[0.08]">
+        <div className="ambient-glow-pink -top-20 left-10 opacity-30 pointer-events-none" />
+        <div className="ambient-glow-orange top-20 right-0 opacity-25 pointer-events-none" />
+
+        <div className="container mx-auto px-5 lg:px-10 relative z-10">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#181818] border border-white/10 text-xs font-mono uppercase tracking-widest text-[#FF706C]">
+              <span>AGENCY MANIFESTO</span>
+            </div>
+
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-heading font-bold text-[#F5F3F2] tracking-tight leading-[1.08]">
+              Engineering Tomorrow's <br />
+              <span className="text-gradient-brand">Intelligent Systems.</span>
             </h1>
-            <p className="text-lg text-muted-foreground">
-              We are a technology solutions company dedicated to helping businesses 
-              thrive in the digital age through innovative software solutions.
+
+            <p className="text-base sm:text-lg text-[#A09B9B] max-w-2xl mx-auto leading-relaxed">
+              STARK INFOTECH is a premier custom software and digital solutions company. We bridge the gap between ambitious business vision and bulletproof technical execution.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="py-20 lg:py-28 bg-card">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Our Mission
+      {/* Identity & Mission Section */}
+      <section className="py-24 lg:py-32 bg-[#141414] border-b border-white/[0.08]">
+        <div className="container mx-auto px-5 lg:px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            {/* Left Narrative */}
+            <div className="lg:col-span-7 space-y-6">
+              <span className="text-xs font-mono uppercase tracking-widest text-[#FF706C]">
+                ORIGIN & PURPOSE
+              </span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-[#F5F3F2]">
+                Sovereign Code. <br />
+                Uncompromising Quality.
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                At STARKS INFOTECH, we believe that great technology should be accessible 
-                to businesses of all sizes. Our mission is to deliver enterprise-grade 
-                software solutions that are secure, scalable, and tailored to your unique needs.
-              </p>
-              <p className="text-muted-foreground text-lg leading-relaxed">
-                We combine technical expertise with business acumen to create solutions 
-                that not only work flawlessly but also drive real business value. From 
-                startups to established enterprises, we're committed to being your 
-                trusted technology partner for the long term.
-              </p>
+              <div className="space-y-4 text-sm sm:text-base text-[#A09B9B] leading-relaxed">
+                <p>
+                  At <span className="text-[#F5F3F2] font-semibold">STARK INFOTECH</span>, we specialize in high-impact custom software and digital solutions tailored to modern enterprise workflows.
+                </p>
+                <p>
+                  We engineer bespoke web applications, native mobile experiences, enterprise database clusters, intelligent automations, and cybersecurity defense frameworks for forward-thinking clients worldwide.
+                </p>
+                <p>
+                  We believe software should be an enduring company asset, not a perpetual recurring cost. We deliver complete source code ownership, zero hidden vendor dependencies, and architectures engineered to scale smoothly.
+                </p>
+              </div>
             </div>
-            <div className="flex justify-center">
-              <div className="w-full max-w-md aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 border border-border flex items-center justify-center">
-                <span className="text-6xl font-bold text-primary/30">SI</span>
+
+            {/* Right Abstract Visual Card */}
+            <div className="lg:col-span-5 flex justify-center">
+              <div className="relative w-full max-w-md aspect-square rounded-3xl bg-gradient-to-br from-[#181818] to-[#111111] border border-white/10 p-8 flex flex-col justify-between overflow-hidden shadow-2xl">
+                <div className="ambient-glow-pink -top-10 -right-10 opacity-30" />
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-mono text-[#777272]">EST. STARK INFOTECH</span>
+                  <span className="text-xs font-mono text-[#E94F9B]">GLOBAL REMOTE</span>
+                </div>
+
+                <div className="my-auto text-center py-6">
+                  <div className="text-7xl font-heading font-bold text-gradient-brand">
+                    SI
+                  </div>
+                  <div className="text-xs font-mono uppercase tracking-widest text-[#A09B9B] mt-2">
+                    Custom Software & Digital Solutions
+                  </div>
+                </div>
+
+                <div className="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-[#777272] font-mono">
+                  <span>Architecture: Sovereign</span>
+                  <span className="text-[#38B2AC]">Production-Grade</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="py-20 lg:py-28 bg-background">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Our Values
+      {/* Core Values Section */}
+      <section className="py-24 lg:py-36 bg-[#111111] border-b border-white/[0.08]">
+        <div className="container mx-auto px-5 lg:px-10">
+          <div className="max-w-3xl mb-16 lg:mb-20">
+            <span className="text-xs font-mono uppercase tracking-widest text-[#FF706C]">
+              FOUNDATIONAL PILLARS
+            </span>
+            <h2 className="text-4xl sm:text-5xl font-heading font-bold text-[#F5F3F2] tracking-tight mt-2 mb-4">
+              Our Core <span className="text-gradient-brand">Values.</span>
             </h2>
-            <p className="text-muted-foreground text-lg">
-              The principles that guide everything we do
+            <p className="text-base text-[#A09B9B]">
+              The principles and engineering discipline that guide every technical decision we make.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {values.map((value, index) => {
-              const Icon = value.icon;
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+            {values.map((val) => {
+              const Icon = val.icon;
               return (
                 <div
-                  key={index}
-                  className="p-8 rounded-xl bg-card border border-border hover:border-primary/30 transition-colors"
+                  key={val.number}
+                  className="p-8 lg:p-10 rounded-2xl bg-[#161616] border border-white/[0.08] hover:border-[#E94F9B]/40 transition-all duration-300 group"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                    <Icon className="text-primary" size={24} />
+                  <div className="flex items-center justify-between mb-6">
+                    <span className="text-sm font-mono text-[#E94F9B] font-semibold">
+                      {val.number}
+                    </span>
+                    <div className="w-10 h-10 rounded-xl bg-[#202020] border border-white/5 flex items-center justify-center text-[#FF706C] group-hover:bg-[#E94F9B]/10 transition-colors">
+                      <Icon size={20} />
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-3">{value.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{value.description}</p>
+
+                  <h3 className="text-2xl font-heading font-bold text-[#F5F3F2] mb-3 group-hover:text-gradient-brand transition-colors">
+                    {val.title}
+                  </h3>
+
+                  <p className="text-sm sm:text-base text-[#A09B9B] leading-relaxed">
+                    {val.description}
+                  </p>
                 </div>
               );
             })}
@@ -104,53 +166,69 @@ const About = () => {
         </div>
       </section>
 
-      {/* Expertise Section */}
-      <section className="py-20 lg:py-28 bg-card">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
-              Our Expertise
+      {/* Engineering Philosophy Section */}
+      <section className="py-24 lg:py-32 bg-[#141414] border-b border-white/[0.08]">
+        <div className="container mx-auto px-5 lg:px-10 max-w-4xl">
+          <div className="text-center space-y-4 mb-14">
+            <span className="text-xs font-mono uppercase tracking-widest text-[#FF706C]">
+              HOW WE OPERATE
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-[#F5F3F2]">
+              The STARK Engineering Philosophy
             </h2>
-            <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
+          </div>
+
+          <div className="space-y-6 text-sm sm:text-base text-[#A09B9B] leading-relaxed divide-y divide-white/[0.06]">
+            <div className="pt-6 first:pt-0">
+              <h4 className="text-lg font-heading font-bold text-[#F5F3F2] mb-2">
+                1. Continuous Learning & Modern Standards
+              </h4>
               <p>
-                With years of experience in software development, we've built a team of 
-                skilled professionals who are passionate about technology and dedicated 
-                to delivering excellence. Our expertise spans across web development, 
-                mobile applications, database management, business software, and cybersecurity.
+                The digital ecosystem changes rapidly. We continuously refine our mastery across modern runtimes, edge computing, TypeScript best practices, and AI agent frameworks to ensure your products never suffer from early technical obsolescence.
               </p>
+            </div>
+
+            <div className="pt-6">
+              <h4 className="text-lg font-heading font-bold text-[#F5F3F2] mb-2">
+                2. Pragmatic Simplicity Over Over-Engineering
+              </h4>
               <p>
-                We stay ahead of the curve by continuously learning and adopting the 
-                latest technologies and best practices. Whether you need a simple website 
-                or a complex enterprise system, we have the knowledge and experience to 
-                deliver solutions that exceed expectations.
+                We do not add complex microservices or unnecessary dependencies where clean, modular code is faster and cheaper to run. Simple systems break less, deploy faster, and cost significantly less to maintain.
               </p>
+            </div>
+
+            <div className="pt-6">
+              <h4 className="text-lg font-heading font-bold text-[#F5F3F2] mb-2">
+                3. Total Transparency & High Communication
+              </h4>
               <p>
-                What sets us apart is our commitment to building long-term relationships 
-                with our clients. We don't just deliver projects; we become your technology 
-                partner, providing ongoing support and guidance as your business grows.
+                You never have to wonder what we are doing. With shared git repositories, staging preview links, and asynchronous video demos, we work as a seamless extension of your core team.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 lg:py-28 bg-background">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Let's Work Together
-            </h2>
-            <p className="text-lg text-muted-foreground mb-10">
-              Ready to start your next project? We'd love to hear from you.
-            </p>
-            <Button size="lg" asChild>
-              <a href="mailto:contact@starksinfotech.com">
-                Get in Touch
-                <ArrowRight size={18} className="ml-2" />
-              </a>
-            </Button>
-          </div>
+      {/* Bottom CTA */}
+      <section className="py-24 lg:py-32 bg-[#0e0e0e] text-center relative overflow-hidden">
+        <div className="ambient-glow-orange -bottom-20 right-1/4 opacity-30 pointer-events-none" />
+        <div className="container mx-auto px-5 lg:px-10 relative z-10 max-w-3xl">
+          <h2 className="text-4xl sm:text-5xl font-heading font-bold text-[#F5F3F2] tracking-tight mb-4">
+            Let's Engineer Together.
+          </h2>
+          <p className="text-base text-[#A09B9B] mb-8 leading-relaxed">
+            Have an upcoming software build, bot automation requirement, or security overhaul? We are ready to collaborate.
+          </p>
+          <Link
+            to="/contact"
+            className="group inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#F5F3F2] text-[#111111] font-semibold text-base hover:bg-white hover:shadow-2xl hover:shadow-[#E94F9B]/20 transition-all duration-300"
+          >
+            <span>Initiate Contact</span>
+            <ArrowUpRight
+              size={18}
+              className="text-[#E94F9B] transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1"
+            />
+          </Link>
         </div>
       </section>
     </Layout>
