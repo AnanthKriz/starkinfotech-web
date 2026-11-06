@@ -22,9 +22,8 @@ const Hero = () => {
           </div>
 
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-heading font-bold text-[#F5F3F2] tracking-tight leading-[1.05]">
-            Technology <br className="hidden sm:inline" />
-            Built <span className="text-gradient-brand">Beyond</span> <br className="hidden sm:inline" />
-            <span className="text-gradient-brand">Expectations.</span>
+            Engineering the Future <br className="hidden sm:inline" />
+            <span className="text-gradient-brand">Through Technology.</span>
           </h1>
         </div>
 
@@ -61,7 +60,7 @@ const Hero = () => {
           {/* Right Column: Supporting Manifesto & CTAs */}
           <div className="lg:col-span-3 flex flex-col justify-center text-center lg:text-left space-y-6 order-3">
             <p className="text-sm lg:text-base text-[#A09B9B] leading-relaxed">
-              We engineer custom software ecosystems, intelligent WhatsApp automations, and resilient backend architectures built for brands that demand absolute precision.
+              We build secure software, intelligent digital products, and custom technology solutions that help businesses and individuals move forward.
             </p>
 
             <div className="flex flex-col sm:flex-row lg:flex-col gap-3 justify-center lg:justify-start">

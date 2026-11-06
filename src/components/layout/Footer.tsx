@@ -5,18 +5,19 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const services = [
-    { name: "Web Development", path: "/services#web" },
-    { name: "Bot Development & Automation", path: "/services#chatbot" },
-    { name: "Mobile App Development", path: "/services#mobile" },
-    { name: "Database Systems", path: "/services#database" },
-    { name: "Billing & ERP Solutions", path: "/services#billing" },
-    { name: "Cybersecurity & Protection", path: "/services#security" },
+    { name: "Cybersecurity Solutions", path: "/services#security" },
+    { name: "Business & Billing Software", path: "/services#billing" },
+    { name: "Application Development", path: "/services#mobile" },
+    { name: "Website Development", path: "/services#web" },
+    { name: "Bot Development", path: "/services#chatbot" },
+    { name: "Automation Solutions", path: "/services#automation" },
   ];
 
   const quickLinks = [
     { name: "Home", path: "/" },
     { name: "Services", path: "/services" },
-    { name: "About Agency", path: "/about" },
+    { name: "Leadership", path: "/leadership" },
+    { name: "About Our Company", path: "/about" },
     { name: "Contact Us", path: "/contact" },
   ];
 
@@ -36,8 +37,8 @@ const Footer = () => {
               <span className="w-1.5 h-1.5 rounded-full bg-[#E94F9B]" />
             </Link>
             <p className="text-[#A09B9B] text-sm leading-relaxed max-w-sm">
-              We specialize in custom software development, digital solutions, mobile applications, 
-              scalable database architectures, and enterprise cybersecurity.
+              We are a technology-driven IT company focused on developing innovative software solutions,
+              building intelligent digital products, and providing advanced technology services.
             </p>
             <div className="pt-2 flex items-center gap-3 text-xs text-[#777272]">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#181818] border border-white/5 text-[#A09B9B]">
@@ -124,7 +125,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#777272]">
-          <p>© {currentYear} STARK INFOTECH. All rights reserved.</p>
+          <p>© {currentYear} Stark Infotech. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <Link to="/about" className="hover:text-[#F5F3F2] transition-colors">
               Agency Values

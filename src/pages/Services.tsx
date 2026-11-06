@@ -2,21 +2,20 @@ import { useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import {
+  Shield,
+  Receipt,
+  Smartphone,
   Globe,
   Bot,
-  Smartphone,
-  Database,
-  Receipt,
-  Shield,
+  Zap,
   CheckCircle2,
   ArrowUpRight,
-  Sparkles,
 } from "lucide-react";
 
 interface DetailedService {
   id: string;
   index: string;
-  icon: typeof Globe;
+  icon: typeof Shield;
   title: string;
   tagline: string;
   description: string;
@@ -26,106 +25,100 @@ interface DetailedService {
 
 const detailedServices: DetailedService[] = [
   {
-    id: "web",
+    id: "security",
     index: "01",
-    icon: Globe,
-    title: "Web Development",
-    tagline: "High-Performance Modern Web Platforms",
+    icon: Shield,
+    title: "Cybersecurity Solutions",
+    tagline: "Digital Protection & Vulnerability Defense",
     description:
-      "We design and build powerful, lightning-fast web applications that drive verifiable business growth. From bespoke brand websites and reactive single-page applications to intricate multi-tenant SaaS dashboards, every platform is engineered for speed, security, and effortless scale.",
+      "We develop security-focused software and digital protection solutions designed to strengthen digital infrastructure and improve security practices.",
     features: [
-      "Custom React & Next.js SSR / SSG Architectures",
-      "Enterprise E-Commerce Platforms & Gateways",
-      "Interactive Admin Telemetry & Client Portals",
-      "High-Throughput RESTful & GraphQL API Gateways",
-      "Pixel-Perfect UI/UX Design System Implementations",
+      "Cybersecurity software development",
+      "Security tools and utilities",
+      "Vulnerability assessment solutions",
+      "Digital security and protection systems",
     ],
-    techStack: ["React 18", "Next.js", "TypeScript", "Tailwind CSS", "Node.js"],
+    techStack: ["Defense Architectures", "Security Auditing", "Threat Analysis", "Zero-Trust Protocols"],
   },
   {
-    id: "chatbot",
+    id: "billing",
     index: "02",
-    icon: Bot,
-    title: "Bot Development & Automation",
-    tagline: "Autonomous WhatsApp & Workflow Systems",
+    icon: Receipt,
+    title: "Business & Billing Software",
+    tagline: "Operations Management & Financial Workflow",
     description:
-      "STARK INFOTECH delivers enterprise WhatsApp automation and intelligent workflow systems designed to streamline customer communication and business workflows directly inside WhatsApp. We build autonomous userbots, transactional dispatch systems, and scheduled cron engines that eliminate manual repetitive labor.",
+      "We build customized business management and billing solutions that simplify operations and improve efficiency.",
     features: [
-      "WhatsApp Business API & Userbot Frameworks",
-      "Real-Time Webhook Routing & CRM Auto-Sync",
-      "Interactive Natural Language & Multi-Level Menus",
-      "Scheduled Broadcasts & Auto-Trigger Notifications",
-      "24/7 Uninterrupted Self-Healing Server Daemon",
+      "Billing and invoicing systems",
+      "Business management software",
+      "Inventory management solutions",
+      "Custom business automation",
     ],
-    techStack: ["Node.js", "Python", "WhatsApp API", "Webhooks", "Redis"],
+    techStack: ["Invoicing Engines", "Inventory Sync", "GST Compliance", "POS Software"],
   },
   {
     id: "mobile",
     index: "03",
     icon: Smartphone,
-    title: "Mobile App Development",
-    tagline: "Fluid Native iOS & Android Experiences",
+    title: "Application Development",
+    tagline: "Modern Mobile & Cross-Platform Software",
     description:
-      "Transform high-impact ideas into intuitive mobile products. We build native and cross-platform mobile applications with 60fps animations, robust offline sync, and deep hardware sensor integrations that users love returning to.",
+      "We develop modern mobile applications focused on performance, usability, reliability, and seamless user experiences.",
     features: [
-      "Native Android Application Development (Kotlin/Java)",
-      "Native iOS Application Development (Swift)",
-      "Cross-Platform Engineering (Flutter & React Native)",
-      "Polished Human Interface (HIG) UI/UX Design",
-      "Continuous App Store Deployment & Lifecycle Support",
+      "Android application development",
+      "iOS application development",
+      "Cross-platform applications",
+      "Custom mobile solutions",
     ],
-    techStack: ["Flutter", "React Native", "Swift", "Kotlin", "Firebase"],
+    techStack: ["Flutter", "React Native", "Android SDK", "iOS Swift", "Mobile APIs"],
   },
   {
-    id: "database",
+    id: "web",
     index: "04",
-    icon: Database,
-    title: "Database Architecture & Management",
-    tagline: "Fault-Tolerant Enterprise Data Infrastructure",
+    icon: Globe,
+    title: "Website Development",
+    tagline: "Scalable Web Applications & Digital Platforms",
     description:
-      "Your company's data is its most critical competitive asset. We architect, implement, and manage resilient database infrastructures that guarantee transactional ACID integrity, sub-millisecond query performance, and total disaster resilience.",
+      "We create modern, responsive, and scalable websites and web applications tailored to business requirements.",
     features: [
-      "Relational Clusters: PostgreSQL, MySQL, SQLite",
-      "Distributed NoSQL: MongoDB, Firebase, Supabase",
-      "High-Concurrency Schema Modeling & Index Tuning",
-      "Zero-Downtime Data Migration & Pipeline Sync",
-      "Automated Continuous Backups & Multi-Region Recovery",
+      "Business and corporate websites",
+      "Custom web applications",
+      "E-commerce platforms",
+      "Modern and responsive web solutions",
     ],
-    techStack: ["PostgreSQL", "MongoDB", "Supabase", "Redis", "AWS RDS"],
+    techStack: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js"],
   },
   {
-    id: "billing",
+    id: "chatbot",
     index: "05",
-    icon: Receipt,
-    title: "Billing & Business Systems",
-    tagline: "Custom POS, Invoicing & ERP Architectures",
+    icon: Bot,
+    title: "Bot Development",
+    tagline: "Intelligent Bots & Messaging Platform Automations",
     description:
-      "Streamline your day-to-day operations with custom software built specifically for your business model. From point-of-sale registers to complete custom ERP suites, our tools eliminate inventory shrinkage, accelerate cash flow, and ensure compliance.",
+      "We develop customized bots and messaging-platform integrations to automate communication and improve digital interactions.",
     features: [
-      "Retail & Wholesale POS Cashier Systems",
-      "Multi-Warehouse Inventory Management Software",
-      "Automated GST-Compliant Tax Invoicing Modules",
-      "Automated Payment Reconciliation & Receipts",
-      "Modular Custom ERP Dashboards for Executive Teams",
+      "Telegram bot development",
+      "Discord bot development",
+      "WhatsApp automation integrations",
+      "Custom intelligent bots",
     ],
-    techStack: ["React", "Express", "PostgreSQL", "TypeScript", "Node.js"],
+    techStack: ["WhatsApp API", "Telegram Bot API", "Discord.js", "Python", "Node.js"],
   },
   {
-    id: "security",
+    id: "automation",
     index: "06",
-    icon: Shield,
-    title: "Cybersecurity & Data Protection",
-    tagline: "Proactive Defense & Threat Neutralization",
+    icon: Zap,
+    title: "Automation Solutions",
+    tagline: "Workflow Optimization & API Integrations",
     description:
-      "Safeguard your mission-critical infrastructure from sophisticated cyber threats and ransom exploits. Our security engineers perform aggressive penetration testing, enforce zero-trust policies, and set up continuous monitoring around the clock.",
+      "We design automation systems that reduce repetitive work, connect digital services, and improve business operations.",
     features: [
-      "Perimeter Network Security Audits & Vulnerability Scans",
-      "Ethical Penetration Testing (Web, Mobile & Network)",
-      "Ransomware Isolation & Data Theft Prevention",
-      "End-to-End Encryption & Endpoint Hardening",
-      "Incident Response Protocols, Forensic Recovery & SOC Setup",
+      "Business workflow automation",
+      "API integrations",
+      "Task automation",
+      "Custom automation systems",
     ],
-    techStack: ["OWASP Standards", "Wireshark", "Burp Suite", "Kali", "TLS 1.3"],
+    techStack: ["Workflow Engines", "Webhook Handlers", "Custom APIs", "Data Pipelines"],
   },
 ];
 
@@ -153,16 +146,16 @@ const Services = () => {
         <div className="container mx-auto px-5 lg:px-10 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#181818] border border-white/10 text-xs font-mono uppercase tracking-widest text-[#FF706C]">
-              <span>FULL-SPECTRUM ENGINEERING</span>
+              <span>ADVANCED TECHNOLOGY SERVICES</span>
             </div>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-heading font-bold text-[#F5F3F2] tracking-tight leading-[1.08]">
-              Engineered For <br />
-              <span className="text-gradient-brand">Unrivaled Velocity.</span>
+              Our Professional <br />
+              <span className="text-gradient-brand">Services.</span>
             </h1>
 
             <p className="text-base sm:text-lg text-[#A09B9B] max-w-2xl mx-auto leading-relaxed">
-              From intelligent WhatsApp automations to enterprise cloud software, we build robust systems that convert complexity into sustainable competitive advantage.
+              We specialize in cybersecurity software, business management systems, billing and invoicing software, mobile application development, website development, bot development, networking solutions, and intelligent automation systems.
             </p>
           </div>
         </div>
@@ -210,7 +203,7 @@ const Services = () => {
                     {/* Features checklist */}
                     <div className="space-y-3 pt-3">
                       <div className="text-xs uppercase tracking-wider text-[#F5F3F2] font-semibold">
-                        Core Capabilities
+                        Service Scope & Deliverables
                       </div>
                       {service.features.map((feature, fIdx) => (
                         <div key={fIdx} className="flex items-start gap-3 text-sm text-[#F5F3F2]">
@@ -225,7 +218,7 @@ const Services = () => {
 
                     {/* Tech Stack Tags */}
                     <div className="pt-4 flex flex-wrap items-center gap-2">
-                      <span className="text-xs font-mono text-[#777272] mr-2">Stack:</span>
+                      <span className="text-xs font-mono text-[#777272] mr-2">Focus:</span>
                       {service.techStack.map((tech) => (
                         <span
                           key={tech}
@@ -242,7 +235,7 @@ const Services = () => {
                         to="/contact"
                         className="group inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#181818] border border-white/10 text-sm font-semibold text-[#F5F3F2] hover:bg-[#202020] hover:border-[#E94F9B]/50 transition-all duration-300"
                       >
-                        <span>Request a Quote for {service.title}</span>
+                        <span>Inquire About {service.title}</span>
                         <ArrowUpRight
                           size={16}
                           className="text-[#FF706C] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -277,8 +270,8 @@ const Services = () => {
                       </div>
 
                       <div className="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-[#777272] font-mono">
-                        <span>Architecture Tier: High-Load</span>
-                        <span className="text-[#38B2AC]">SLA: 99.9%</span>
+                        <span>Quality: Enterprise</span>
+                        <span className="text-[#38B2AC]">Support: Active</span>
                       </div>
                     </div>
                   </div>
@@ -294,10 +287,10 @@ const Services = () => {
         <div className="ambient-glow-pink -bottom-20 left-1/3 opacity-30 pointer-events-none" />
         <div className="container mx-auto px-5 lg:px-10 relative z-10 max-w-3xl">
           <h2 className="text-4xl sm:text-5xl font-heading font-bold text-[#F5F3F2] tracking-tight mb-4">
-            Need a Custom Architecture?
+            Need a Custom Solution?
           </h2>
           <p className="text-base text-[#A09B9B] mb-8 leading-relaxed">
-            Every business has unique technical constraints. Schedule a direct technical scoping session with our lead architects.
+            Every business has unique technical requirements. Reach out to discuss how Stark Infotech can assist your next digital project.
           </p>
           <Link
             to="/contact"

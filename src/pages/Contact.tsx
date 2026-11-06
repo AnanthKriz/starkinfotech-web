@@ -7,7 +7,7 @@ const Contact = () => {
   const [formState, setFormState] = useState({
     name: "",
     email: "",
-    service: "WhatsApp Bot & Automation",
+    service: "Cybersecurity Solutions",
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
@@ -114,12 +114,12 @@ const Contact = () => {
                     onChange={(e) => setFormState({ ...formState, service: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl bg-[#202020] border border-white/10 text-sm text-[#F5F3F2] focus:outline-none focus:border-[#E94F9B] transition-colors"
                   >
-                    <option value="WhatsApp Bot & Automation">WhatsApp Bot & Workflow Automation</option>
-                    <option value="Full-Stack Web Application">Full-Stack Web Application</option>
-                    <option value="Mobile App Development">Mobile App Development (iOS & Android)</option>
-                    <option value="Database Architecture">Database Architecture & Management</option>
-                    <option value="Billing & ERP Systems">Billing & Business ERP Solutions</option>
-                    <option value="Cybersecurity & Audit">Cybersecurity & Penetration Testing</option>
+                    <option value="Cybersecurity Solutions">Cybersecurity Solutions</option>
+                    <option value="Business & Billing Software">Business & Billing Software</option>
+                    <option value="Application Development">Application Development (iOS & Android)</option>
+                    <option value="Website Development">Website Development (Web Applications)</option>
+                    <option value="Bot Development">Bot Development (Telegram, Discord, WhatsApp)</option>
+                    <option value="Automation Solutions">Automation Solutions (Workflow & APIs)</option>
                   </select>
                 </div>
 
