@@ -192,31 +192,6 @@ const Contact = () => {
                 </p>
               </div>
 
-              {/* GitHub Card */}
-              <div className="p-6 rounded-2xl bg-[#161616] border border-white/[0.08] hover:border-[#F6A23B]/40 transition-all duration-300">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#202020] border border-white/5 flex items-center justify-center text-[#F6A23B]">
-                    <Github size={18} />
-                  </div>
-                  <span className="text-xs font-mono text-[#777272]">OPEN SOURCE</span>
-                </div>
-                <div className="text-xs font-mono uppercase tracking-wider text-[#777272]">
-                  Engineering Repository
-                </div>
-                <a
-                  href="https://github.com/starkinfotech"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-base font-heading font-bold text-[#F5F3F2] hover:text-[#F6A23B] transition-colors flex items-center gap-1.5 mt-1"
-                >
-                  <span>github.com/starkinfotech</span>
-                  <ArrowUpRight size={14} className="text-[#A09B9B]" />
-                </a>
-                <p className="text-xs text-[#A09B9B] mt-2">
-                  Explore public modules, bot scripts, and contributions.
-                </p>
-              </div>
-
               {/* Working Hours & Global Remote Card */}
               <div className="p-6 rounded-2xl bg-[#161616] border border-white/[0.08] space-y-4">
                 <div className="flex items-start gap-3">
